@@ -14,6 +14,6 @@ From a coding perspective, we'll see how to:
 
 The human player's piece (purple) will be repositioned at the bottom right of the maze each time, and the CPU's piece (green) will be repositioned at the bottom left. The maze and the exit position will be random.
 
-[![Labyrinthe 3D](http://img.youtube.com/vi/i7F4KieF1Lo/0.jpg)](https://www.youtube.com/watch?v=i7F4KieF1Lo)
+[![FunMaze](https://youtu.be/1MBjJuxV3wM?si=7mU11MSj5OhxCAoQ/0.png)](https://youtu.be/1MBjJuxV3wM?si=7mU11MSj5OhxCAoQ)
 
 (click the image to see the Youtube video)
