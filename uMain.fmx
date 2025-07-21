@@ -1,0 +1,306 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'FunMaze Programmez!'
+  ClientHeight = 768
+  ClientWidth = 1368
+  Fill.Kind = Gradient
+  Fill.Gradient.Points = <
+    item
+      Color = xFF0D4402
+      Offset = 0.000000000000000000
+    end
+    item
+      Color = xFF8CCEE3
+      Offset = 1.000000000000000000
+    end>
+  Fill.Gradient.StartPosition.X = 0.500000000000000000
+  Fill.Gradient.StartPosition.Y = 1.000000000000000000
+  Fill.Gradient.StopPosition.X = 0.499999970197677600
+  Fill.Gradient.StopPosition.Y = 0.000000000000000000
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  DesignerMasterStyle = 0
+  object vp3D: TViewport3D
+    Align = Client
+    Color = claNull
+    Size.Width = 1368.000000000000000000
+    Size.Height = 768.000000000000000000
+    Size.PlatformDefault = False
+    object layIHM: TLayout
+      Align = Top
+      Size.Width = 1368.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object rIHM: TRectangle
+        Align = Center
+        Fill.Color = claAzure
+        Opacity = 0.899999976158142100
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 469.000000000000000000
+        Size.Height = 68.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Thickness = 3.000000000000000000
+        XRadius = 6.000000000000000000
+        YRadius = 6.000000000000000000
+        object layIHMInfos: TLayout
+          Align = Client
+          Size.Width = 469.000000000000000000
+          Size.Height = 68.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object layCPU: TLayout
+            Align = Left
+            Size.Width = 160.000000000000000000
+            Size.Height = 68.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object lblCPU: TLabel
+              Align = Left
+              StyledSettings = [Family]
+              Size.Width = 57.000000000000000000
+              Size.Height = 68.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = xFF359635
+              TextSettings.HorzAlign = Center
+              Text = 'CPU'
+              TabOrder = 0
+            end
+            object lblCPUScore: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 103.000000000000000000
+              Size.Height = 68.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 24.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = xFF174DF7
+              TextSettings.HorzAlign = Center
+              TabOrder = 1
+            end
+          end
+          object layPlayer: TLayout
+            Align = Left
+            Position.X = 160.000000000000000000
+            Size.Width = 160.000000000000000000
+            Size.Height = 68.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object lblPlayer: TLabel
+              Align = Left
+              StyledSettings = [Family]
+              Size.Width = 57.000000000000000000
+              Size.Height = 68.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claOrchid
+              TextSettings.HorzAlign = Center
+              Text = 'YOU'
+              TabOrder = 0
+            end
+            object lblPlayerScore: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 103.000000000000000000
+              Size.Height = 68.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 24.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = xFF174DF7
+              TextSettings.HorzAlign = Center
+              TabOrder = 1
+            end
+          end
+          object btnQuit: TButton
+            Align = Center
+            Size.Width = 105.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = 'Quit'
+            TextSettings.Trimming = None
+            OnClick = btnQuitClick
+          end
+        end
+      end
+    end
+    object dmyLabyrinthe: TDummy
+      Position.Y = 4.000000000000000000
+      Position.Z = 13.000000000000000000
+      RotationAngle.X = -40.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      Quanternion = '(0.342020183801651,0,0,-0.939692616462708)'
+      object pGround: TPlane
+        Width = 25.000000000000000000
+        Height = 25.000000000000000000
+        Depth = 0.001000000047497451
+        SubdivisionsHeight = 20
+        SubdivisionsWidth = 20
+        MaterialSource = lmsGround
+        object dmyWalls: TDummy
+          Position.X = -12.500000000000000000
+          Position.Y = -12.500000000000000000
+          Width = 1.000000000000000000
+          Height = 1.000000000000000000
+          Depth = 1.000000000000000000
+          object player: TCylinder
+            Position.Z = -0.400000005960464500
+            RotationAngle.X = 90.000000000000000000
+            Width = 1.000000000000000000
+            Height = 1.000000000000000000
+            Depth = 1.000000000000000000
+            SubdivisionsCap = 6
+            SubdivisionsHeight = 6
+            MaterialSource = lmsPlayer
+            Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+          end
+          object playerCPU: TCylinder
+            Position.Z = -0.400000005960464500
+            RotationAngle.X = 90.000000000000000000
+            Width = 1.000000000000000000
+            Height = 1.000000000000000000
+            Depth = 1.000000000000000000
+            SubdivisionsCap = 6
+            SubdivisionsHeight = 6
+            MaterialSource = lmsCPUPlayer
+            Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+          end
+          object arrivee: TCube
+            Position.X = 0.500000000000000000
+            Position.Y = 0.500000000000000000
+            Width = 1.000000000000000000
+            Height = 1.000000000000000000
+            Depth = 0.200000002980232200
+            TwoSide = True
+            SubdivisionsDepth = 3
+            SubdivisionsHeight = 3
+            SubdivisionsWidth = 3
+            MaterialSource = lmsFinish
+          end
+        end
+        object aniRotation: TFloatAnimation
+          Duration = 2.000000000000000000
+          Interpolation = Sinusoidal
+          OnFinish = aniRotationFinish
+          PropertyName = 'RotationAngle.Y'
+          StartValue = 0.000000000000000000
+          StopValue = 360.000000000000000000
+        end
+      end
+      object Light: TLight
+        Color = claNull
+        LightType = Directional
+        SpotCutOff = 60.000000000000000000
+        SpotExponent = 4.000000000000000000
+        Position.Z = -13.000000000000000000
+        Width = 1.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 1.000000000000000000
+      end
+    end
+  end
+  object lmsGround: TLightMaterialSource
+    Diffuse = claPeru
+    Ambient = xFFC47A32
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 32
+    Top = 224
+  end
+  object lmsWalls: TLightMaterialSource
+    Diffuse = claNull
+    Ambient = claSlategray
+    Emissive = claNull
+    Specular = xFF656161
+    Texture.PNG = {
+      89504E470D0A1A0A0000000D49484452000001000000010008060000005C72A8
+      660000000473424954080808087C0864880000036949444154789CEDD7B16D42
+      511045C1C5DFC444E03A7121A64D4C468C106EE249C83A33055C6D74A4DDCDCC
+      6B80A48F771F00BC8F0040980040980040980040980040980040980040980040
+      980040980040980040980040980040980040980040980040980040980040D8E7
+      EAC16DDBE67038AC9E85BCFBFD3ECFE773E9E6F2001C8FC7F93E9F57CF42DECF
+      E532D7EB75E9A61700C20400C20400C20400C20400C20400C20400C20400C204
+      00C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C2
+      0400C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400
+      C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C204
+      00C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C2
+      0400C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400
+      C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C204
+      00C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C2
+      0400C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400
+      C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C204
+      00C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C2
+      0400C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400
+      C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C204
+      00C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C2
+      0400C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400
+      C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C204
+      00C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C2
+      0400C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400
+      C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C204
+      00C20400C20400C20400C20400C20400C20400C20400C20400C20400C20400C2
+      0400C20400C27633F35A39B8DFEFE7EB745A3909CCCCEFED368FC763E9E6F200
+      00FF871700C20400C20400C20400C20400C20400C20400C20400C20400C20400
+      C20400C20400C20400C20400C20400C20400C20400C20400C20400C2FE000441
+      16F6AC4BC1340000000049454E44AE426082}
+    Shininess = 30
+    Left = 32
+    Top = 304
+  end
+  object timerCPU: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = timerCPUTimer
+    Left = 32
+    Top = 88
+  end
+  object lmsPlayer: TLightMaterialSource
+    Diffuse = claOrchid
+    Ambient = xFF202020
+    Emissive = claPurple
+    Specular = xFF606060
+    Shininess = 45
+    Left = 32
+    Top = 160
+  end
+  object lmsFinish: TLightMaterialSource
+    Diffuse = claWhite
+    Ambient = claWhite
+    Emissive = claWhite
+    Specular = xFF606060
+    Texture.PNG = {
+      89504E470D0A1A0A0000000D49484452000000280000002808060000008CFEB8
+      6D0000000473424954080808087C0864880000006E494441545885EDD7B109C0
+      300C05D1AF90FD5756260851B8C22AEED5461C182C5C493A03DDDFC7AA6A326A
+      3C2F49AEF1C4430CA40CA40CA4D60756860FF529F7890DF167DEFA2B36903290
+      32905A1FB87F934C0FFA2779612065206520B53E70FF26F14F02194819481948
+      19483DD2631C49143326E40000000049454E44AE426082}
+    Shininess = 30
+    Left = 32
+    Top = 376
+  end
+  object lmsCPUPlayer: TLightMaterialSource
+    Diffuse = claLime
+    Ambient = xFF202020
+    Emissive = claSeagreen
+    Specular = xFF606060
+    Shininess = 30
+    Left = 32
+    Top = 448
+  end
+end
