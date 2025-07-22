@@ -1,4 +1,4 @@
-# RandomMaze
+# FunMaze
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 ![Top language](https://img.shields.io/github/languages/top/gbegreg/FunMaze)
 [![](https://tokei.rs/b1/github/gbegreg/MapReduce?category=code)](https://github.com//gbegreg/FunMaze)
