@@ -14,6 +14,6 @@ From a coding perspective, we'll see how to:
 
 The human player's piece (purple) will be repositioned at the bottom right of the maze each time, and the CPU's piece (green) will be repositioned at the bottom left. The maze and the exit position will be random.
 
-[![FunMaze](https://youtu.be/1MBjJuxV3wM?si=7mU11MSj5OhxCAoQ/0.png)](https://youtu.be/1MBjJuxV3wM?si=7mU11MSj5OhxCAoQ)
+[![FunMaze](https://github.com/gbegreg/FunMaze/blob/main/capture.png)](https://youtu.be/1MBjJuxV3wM?si=7mU11MSj5OhxCAoQ)
 
 (click the image to see the Youtube video)
