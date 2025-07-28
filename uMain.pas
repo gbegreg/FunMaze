@@ -236,7 +236,6 @@ begin
   var unCube := TCube.Create(nil);
   unCube.Parent := dmyWalls;
   unCube.Name := 'cube' + pGround.ChildrenCount.ToString;
-  unCube.Position.Y := 0;
   unCube.Width := 1;
   unCube.Height := 1;
   unCube.Depth := 1;
