@@ -7,7 +7,45 @@
         <DeviceId Condition="'$(Platform)'=='Android'">ce021712b967a0d10c</DeviceId>
         <DeviceId Condition="'$(Platform)'=='Android64'">ce021712b967a0d10c</DeviceId>
     </PropertyGroup>
-    <ItemGroup Condition="'$(Platform)'=='OSX64'"/>
+    <ItemGroup Condition="'$(Platform)'=='OSX64'">
+        <DeployFile Include="OSX64\Release\FunMaze.info.plist" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FunMaze.app\Contents\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <DeployClass>ProjectOSXInfoPList</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="OSX64\Release\FunMaze" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FunMaze.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>FunMaze</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\delphi_PROJECTICNS.icns" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FunMaze.app\Contents\Resources\</RemoteDir>
+            <RemoteName>FunMaze.icns</RemoteName>
+            <DeployClass>ProjectOSXResource</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="OSX64\Release\FunMaze.entitlements" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FunMaze.app\..\</RemoteDir>
+            <RemoteName>FunMaze.entitlements</RemoteName>
+            <DeployClass>ProjectOSXEntitlements</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='Win32'">
         <DeployFile Include="Win32\Debug\FunMaze.exe" Condition="'$(Config)'=='Debug'">
             <RemoteDir>FunMaze\</RemoteDir>
@@ -33,6 +71,15 @@
             <Overwrite>True</Overwrite>
             <Required>True</Required>
         </DeployFile>
+        <DeployFile Include="Win64\Release\AppxManifest.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FunMaze\</RemoteDir>
+            <RemoteName>AppxManifest.xml</RemoteName>
+            <DeployClass>ProjectUWPManifest</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>FunMaze\Assets\</RemoteDir>
             <RemoteName>Logo44x44.png</RemoteName>
@@ -46,15 +93,6 @@
             <RemoteDir>FunMaze\Assets\</RemoteDir>
             <RemoteName>Logo150x150.png</RemoteName>
             <DeployClass>UWP_DelphiLogo150</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Win64\Release\AppxManifest.xml" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FunMaze\</RemoteDir>
-            <RemoteName>AppxManifest.xml</RemoteName>
-            <DeployClass>ProjectUWPManifest</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -74,5 +112,43 @@
             <Required>True</Required>
         </DeployFile>
     </ItemGroup>
-    <ItemGroup Condition="'$(Platform)'=='OSXARM64'"/>
+    <ItemGroup Condition="'$(Platform)'=='OSXARM64'">
+        <DeployFile Include="OSXARM64\Release\FunMaze.info.plist" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FunMaze.app\Contents\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <DeployClass>ProjectOSXInfoPList</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="OSXARM64\Release\FunMaze" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FunMaze.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>FunMaze</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\delphi_PROJECTICNS.icns" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FunMaze.app\Contents\Resources\</RemoteDir>
+            <RemoteName>FunMaze.icns</RemoteName>
+            <DeployClass>ProjectOSXResource</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="OSXARM64\Release\FunMaze.entitlements" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FunMaze.app\..\</RemoteDir>
+            <RemoteName>FunMaze.entitlements</RemoteName>
+            <DeployClass>ProjectOSXEntitlements</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
 </Project>
