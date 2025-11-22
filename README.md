@@ -5,7 +5,7 @@
 [![](https://tokei.rs/b1/github/gbegreg/MapReduce?category=files)](https://github.com//gbegreg/FunMaze)
 ![GitHub last commit](https://img.shields.io/github/last-commit/gbegreg/FunMaze)
 
-This project is related to the article that will be included in the September/October 2025 issue of Programmez! magazine (french).
+This project is related to the article published in issue <a href="https://www.programmez.com/magazine/article/jeu-de-labyrinthe">272 of the magazine Programmez!</a> (french).
 It's a short game in which the player must reach the maze exit before the computer. The player will use the arrow keys to move their piece.
 Each time the human player wins, the CPU-controlled piece will move a little faster.
 From a coding perspective, we'll see how to:
